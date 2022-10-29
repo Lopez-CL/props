@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-const PersonCard = (props) =>{
-    const [currentFollowers,setCurrentFollowers ] = useState(props.initialFollowers);
+const PersonCard = props =>{
+    const { fName, lName, age, hairColor, initialFollowers } = props;
+    const [currentFollowers,setCurrentFollowers ] = useState(initialFollowers);
     // React working magic and passing through my props dictionary
-const { fName, lName, age, hairColor } = props;
     return (
         <div>
             <h1>{fName}, {lName}</h1>
